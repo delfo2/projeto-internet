@@ -1,20 +1,3 @@
-:root {
-    --fonte: 'Inconsolata', monospace;
-    --fonte-cursiva: 'Josefin Sans', sans-serif;;
-    
-    /*      cores       */
-    --azul-claro: rgb(198, 251, 255);
-    --azul-escuro: rgb(103, 164, 255);
-    --vermelho: rgb(228, 84, 84);
-    --amarelo: rgb(238, 219, 113);
-    --amarelo-hover: rgb(223, 205, 107);
-    --preto: #000;
-}
-
-.corpo {
-    background-color: var(--azul-escuro);
-}
-
 .cabecalho {
     align-items: flex-start;
     box-sizing: border-box;
@@ -77,12 +60,12 @@
     padding: .3rem 1rem;
     transition: 500ms;
 }
-.cabecalho__carrinho:hover, .cabecalho__botao:hover {
+.cabecalho__carrinho:hover, .cabecalho__menu:hover {
     background-color: var(--amarelo-hover);
 }
 
 .carrinho__imagem {
-    width: 50px;
+    width: 40px;
 }
 
 .carrinho__texto {

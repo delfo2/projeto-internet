@@ -1,0 +1,16 @@
+:root {
+    --fonte: 'Inconsolata', monospace;
+    --fonte-cursiva: 'Josefin Sans', sans-serif;;
+    
+    /*      cores       */
+    --azul-claro: rgb(198, 251, 255);
+    --azul-escuro: rgb(103, 118, 255);
+    --vermelho: rgb(228, 84, 84);
+    --amarelo: rgb(248, 227, 106);
+    --amarelo-hover: rgb(223, 196, 107);
+    --preto: #000;
+}
+
+.corpo {
+    background-color: var(--azul-escuro);
+}
