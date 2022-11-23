@@ -9,6 +9,14 @@
     margin: 1rem;
 }
 
+.cabecalho__nav {
+    align-items: center;
+    background-color: var(--amarelo);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
 .cabecalho__menu {
     align-items: center;
     background-color: var(--amarelo);
@@ -28,6 +36,19 @@
 
 .menu__texto {
     margin: 0 0 0 10px;
+}
+
+.menu__links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__link {
+    color: var(--preto);
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
 }
 
 .cabecalho__logo {
@@ -64,6 +85,18 @@
     background-color: var(--amarelo-hover);
 }
 
+.cabecalho__carrinhos {
+    background-color: var(--amarelo);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carrinho__produto {
+    font-size: 1rem;
+    text-align: center;
+}
+
 .carrinho__imagem {
     width: 40px;
 }
@@ -71,4 +104,8 @@
 .carrinho__texto {
     font-size: 1rem;
     margin: 0 0 0 10px;
+}
+
+.esconde {
+    display: none;
 }

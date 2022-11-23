@@ -20,21 +20,32 @@
 
     <!--            CABEÇALHO           -->
 
-    <header>
-        <nav class="cabecalho">
-            <button class="cabecalho__menu">
+    <header class="cabecalho">
+        <nav class="cabecalho__nav">
+            <button class="cabecalho__menu" data-menu="">
                 <img src="./assets/img/menu.png" alt="" class="menu__imagem">
                 <p class="menu__texto">Menu</p>
             </button>
+            <div class="menu__links" data-link="menu">
+                <a href="#" class="menu__link">home</a>
+                <a href="#" class="menu__link">produtos</a>
+                <a href="#" class="menu__link">cadastro</a>    
+            </div>
+        </nav>
             <div class="cabecalho__logo">
                 <img src="./assets/img/foguete.png" alt="" class="logo__imagem">
                 <p class="logo__texto">GapNet</p>
             </div>
-            <button class="cabecalho__carrinho">
-                <img src="./assets/img/trolley.png" alt="" class="carrinho__imagem">
-                <p class="carrinho__texto">Carrinho</p>
-            </button>
-        </nav>
+            <div class="cabecalho__carrinhos">
+                <button class="cabecalho__carrinho" data-carrinho="botao">
+                    <img src="./assets/img/trolley.png" alt="" class="carrinho__imagem">
+                    <p class="carrinho__texto">2 itens no carrinho</p>
+                </button>
+                <div class="carrinho__produtos" data-carrinho="produto">
+                    <p class="carrinho__produto">produto 1</p>    
+                    <p class="carrinho__produto">produto 2</p>    
+                </div>
+            </div>
     </header>
 
     <!--            CONTEÚDO           -->
@@ -43,5 +54,6 @@
         <h1 class="conteudo__titulo">Velocidade & Qualidade</h1>
     </section>
 
+    <script src="./assets/js/cabecalho.js"></script>
 </body>
 </html>
