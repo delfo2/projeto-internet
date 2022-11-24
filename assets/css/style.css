@@ -5,10 +5,13 @@
     /*      cores       */
     --azul-claro: rgb(198, 251, 255);
     --azul-escuro: rgb(103, 118, 255);
-    --vermelho: rgb(228, 84, 84);
+    --vermelho: rgb(228, 84, 144);
     --amarelo: rgb(248, 227, 106);
     --amarelo-hover: rgb(223, 196, 107);
+    --laranja: rgb(255, 175, 71);
+    --laranja-hover: rgb(248, 148, 17);
     --preto: #000;
+    --cinza: rgb(49, 49, 49);
 }
 
 .corpo {

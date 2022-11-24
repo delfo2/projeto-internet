@@ -49,3 +49,18 @@
     margin: 5rem 2rem;
     width: 40%;
 }
+
+.conteudo__rolagem {
+    display: block;
+    font-family: var(--fonte-cursiva);
+    font-weight: 100;
+    text-align: center;
+}
+.conteudo__rolagem::after, .conteudo__rolagem::before {
+    content: '↓';
+    margin: 0 1rem;
+}
+
+.esconde {
+    display: none;
+}
