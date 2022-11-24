@@ -1,0 +1,51 @@
+.conteudo {
+    margin: 4rem auto;
+    width: 50%;
+}
+
+.conteudo__titulo::before {
+    content: url(../img/raio_medio_grande.png);
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.conteudo__titulo {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.conteudo__paragrafo {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 0 -7% 20%;
+}
+
+.conteudo__titulo-2 {
+    font-size: 3rem;
+    margin-left: 28%;
+}
+
+.conteudo__titulo-2::after {
+    content: url(../img/excelencia.png);
+    display: inline-block;
+    padding-left: 10%;
+}
+
+.conteudo__negrito {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.conteudo__grupo {
+    display: flex;
+}
+
+.conteudo__descricao {
+    border-left: 1px black solid;
+    font-size: 1rem;
+    font-family: var(--fonte-cursiva);
+    font-weight: 300;
+    padding-left: 1rem;
+    margin: 5rem 2rem;
+    width: 40%;
+}

@@ -19,3 +19,14 @@ btnCarrinho.addEventListener('click', () => {
         listCarrinho.classList.remove('esconde');
     }
 })
+
+const produtosEscolhidos = '2 itens no carrinho';
+const textCarrinho = document.querySelector('[data-carrinho="texto"]');
+const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
+
+grupoCarrinho.addEventListener('mouseover', () => {
+    textCarrinho.innerHTML = produtosEscolhidos;
+})
+grupoCarrinho.addEventListener('mouseout', () => {
+    textCarrinho.innerHTML = 'Carrinho';
+})
