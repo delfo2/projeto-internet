@@ -1,3 +1,4 @@
+//esconder menu de links
 const btnMenu = document.querySelector('[data-menu]');
 const btnlink = document.querySelector('[data-link]');
 
@@ -9,6 +10,31 @@ btnMenu.addEventListener('click', () => {
     }
 })
 
+//verificando se existe ou não arquivos selecionados no Local Storage
+let produtosEscolhidos = JSON.parse(localStorage.getItem('quantidade')) || 'Escolha um produto';
+localStorage.setItem('quantidade', JSON.stringify(produtosEscolhidos));
+
+const textCarrinho = document.querySelector('[data-carrinho="texto"]');
+const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
+
+grupoCarrinho.addEventListener('mouseover', () => {
+    if(!isNaN(localStorage.quantidade)) {
+        let quantidadeAtual = JSON.parse(localStorage.getItem('quantidade'));
+        produtosEscolhidos = `${quantidadeAtual} produtos no carrinho`;
+        if(quantidadeAtual === 0) {
+            produtosEscolhidos = 'Escolha um produto';
+        }
+    }
+    textCarrinho.innerHTML = produtosEscolhidos;
+})
+grupoCarrinho.addEventListener('mouseout', () => {
+    textCarrinho.innerHTML = 'Carrinho';
+    if(localStorage.quantidade >= 10){
+        textCarrinho.textContent = 'Limite atingido.';
+    }
+})
+
+//esconder botão do carrinho
 const btnCarrinho = document.querySelector('[data-carrinho="botao"]');
 const listCarrinho = document.querySelector('[data-carrinho="produto"]');
 
@@ -18,15 +44,4 @@ btnCarrinho.addEventListener('click', () => {
     } else {
         listCarrinho.classList.remove('esconde');
     }
-})
-
-const produtosEscolhidos = '2 itens no carrinho';
-const textCarrinho = document.querySelector('[data-carrinho="texto"]');
-const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
-
-grupoCarrinho.addEventListener('mouseover', () => {
-    textCarrinho.innerHTML = produtosEscolhidos;
-})
-grupoCarrinho.addEventListener('mouseout', () => {
-    textCarrinho.innerHTML = 'Carrinho';
 })
