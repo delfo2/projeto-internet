@@ -149,3 +149,32 @@
 .esconde {
     display: none;
 }
+
+@media screen and (max-width: 700px) {
+    .cabecalho {
+        margin: 1%;
+    }
+    .cabecalho__menu {
+        font-size: .5rem;
+        padding: 1rem;
+    }
+    .menu__imagem {
+        width: 15px;
+    }
+    .menu__texto {
+        display: none;
+    }
+    .cabecalho__logo {
+        font-size: 3rem;
+        margin-right: 20%;
+    }
+    .cabecalho__carrinhos {
+        right: 5px;
+    }
+    .cabecalho__carrinho {
+        font-size: 1rem;
+    }
+    .carrinho__texto {
+        display: none;
+    }
+}

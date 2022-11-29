@@ -56,3 +56,28 @@
     background-color: var(--preto);
     border: none;
 }
+
+@media screen and (max-width: 700px) {
+    .cartao {
+        margin: 1rem;
+        padding: 1rem;
+        width: 30%;
+    }
+    .cartao__titulo {
+        font-size: 1rem;
+        margin: 1% 0;
+    }
+    .cartao__preco {
+        font-size: .5rem;
+        margin: 1% 0;
+    }
+    .cartao__descricao {
+        font-size: .8rem;
+        font-weight: 100;
+        padding: 0 5%;
+    }
+    .cartao__botao {
+        font-size: .8rem;
+        padding: 1% 8%;
+    }
+}

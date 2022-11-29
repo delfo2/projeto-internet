@@ -64,3 +64,32 @@
 .esconde {
     display: none;
 }
+
+@media screen and (max-width: 700px) {
+    .conteudo {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .conteudo__titulo {
+        align-items: center;
+        display: flex;
+        font-size: 2rem;
+    }
+    .conteudo__paragrafo {
+        font-size: 2rem;
+        margin: 0 0 -3rem 1rem;
+    }
+    .conteudo__titulo-2 {
+        align-items: center;
+        display: flex;
+        font-size: 2rem;
+        margin-left: 4rem;
+    }
+    .conteudo__descricao {
+        font-size: .8rem;
+        font-weight: 100;
+        margin: 2rem 0;
+        padding: 0 1%;
+        width: 100%;
+    }
+}
