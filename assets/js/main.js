@@ -10,7 +10,6 @@ window.addEventListener('scroll', () => {
     }
 })
 
-//
 //esconder menu de links
 const btnMenu = document.querySelector('[data-menu]');
 const btnlink = document.querySelector('[data-link]');
@@ -24,25 +23,28 @@ btnMenu.addEventListener('click', () => {
 })
 
 //verificando quantos produtos tem no local storage
-let quantidadeItens = JSON.parse(localStorage.getItem('itens')).length || 'Escolha um produto';
+const produtosMemoria = JSON.parse(localStorage.getItem('itens')) || [];
+let quantidadeItens = produtosMemoria.length || 'Escolha um produto';
 
-const textCarrinho = document.querySelector('[data-carrinho="texto"]');
+const textoCarrinho = document.querySelector('[data-carrinho="texto"]');
 const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
 
-grupoCarrinho.addEventListener('mouseover', () => {
-    if(!isNaN(quantidadeItens)) {
-        let quantidadeAtual = JSON.parse(localStorage.getItem('itens')).length;
-        quantidadeItens = `${quantidadeAtual} produtos no carrinho`;
-        if(quantidadeAtual === 0) {
-            quantidadeItens = 'Escolha um produto';
-        }
+function atualizaContagem () {
+    quantidadeItens = listaCarrinho.childElementCount;
+    if(quantidadeItens === 0) {
+        textoCarrinho.textContent = 'Escolha um produto';
+    } else {
+        textoCarrinho.textContent = `${quantidadeItens} produtos no carrinho`;
     }
-    textCarrinho.innerHTML = quantidadeItens;
+}
+
+grupoCarrinho.addEventListener('mouseover', () => {
+    atualizaContagem();
 })
 grupoCarrinho.addEventListener('mouseout', () => {
-    textCarrinho.innerHTML = 'Carrinho';
-    if(localStorage.quantidade >= 10){
-        textCarrinho.textContent = 'Limite atingido.';
+    textoCarrinho.innerHTML = 'Carrinho';
+    if(listaCarrinho.childElementCount == 10){
+        textoCarrinho.textContent = 'Limite atingido.';
     }
 })
 
@@ -63,10 +65,6 @@ btnCarrinho.addEventListener('click', () => {
 
 
 const botoesAddCarrinho = document.querySelectorAll('[data-botao="carrinho"]');
-
-const produtosMemoria = JSON.parse(localStorage.getItem('itens')) || [];
-
-const textoCarrinho = document.querySelector('[data-carrinho="texto"]');
 
 produtosMemoria.forEach(element => {
     criarHtml(element);
@@ -137,15 +135,6 @@ function removeItem (botao, titulo) {
     produtosMemoria.splice(produtosMemoria.findIndex(item => item.titulo === titulo),1)
     atualizaContagem();
     localStorage.setItem('itens', JSON.stringify(produtosMemoria));
-}
-
-function atualizaContagem () {
-    quantidadeItens = listaCarrinho.childElementCount;
-    if(quantidadeItens === 0) {
-        textoCarrinho.textContent = 'Escolha um produto';
-    } else {
-        textoCarrinho.textContent = `${quantidadeItens} produtos no carrinho`;
-    }
 }
 
 function atualizaMemoria (objeto){
