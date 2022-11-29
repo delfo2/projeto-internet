@@ -1,129 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GapNet</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GapNet</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700;900&family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700;900&family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" href="./assets/img/foguete.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/cabecalho.css">
-    <link rel="stylesheet" href="./assets/css/conteudo.css">
-    <link rel="stylesheet" href="./assets/css/produtos.css">
+        <link rel="shortcut icon" href="./assets/img/foguete.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/cabecalho.css">
+        <link rel="stylesheet" href="./assets/css/conteudo.css">
+        <link rel="stylesheet" href="./assets/css/produtos.css">
+        <link rel="stylesheet" href="./assets/css/rodape.css">
 
-</head>
-<body class="corpo">
+    </head>
+    <body class="corpo">
 
-    <!--            CABEÇALHO           -->
+        <!--            CABEÇALHO           -->
 
-    <header class="cabecalho">
-        <nav class="cabecalho__nav">
-            <button class="cabecalho__menu" data-menu="">
-                <img src="./assets/img/menu.png" alt="" class="menu__imagem">
-                <p class="menu__texto">Menu</p>
-            </button>
-            <div class="menu__links esconde" data-link="menu">
-                <a href="#" class="menu__link">home</a>
-                <a href="#" class="menu__link">produtos</a>
-                <a href="#" class="menu__link">cadastro</a>    
-            </div>
-        </nav>
-            <div class="cabecalho__logo">
-                <img src="./assets/img/foguete.png" alt="" class="logo__imagem">
-                <p class="logo__texto"><strong>G</strong>ap<strong>N</strong>et</p>
-            </div>
-
-            <div class="cabecalho__carrinhos" data-carrinho="grupo">
-                <button class="cabecalho__carrinho" data-carrinho="botao">
-                    <img src="./assets/img/trolley.png" alt="" class="carrinho__imagem">
-                    <p class="carrinho__texto" data-carrinho="texto">Carrinho</p>
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <button class="cabecalho__menu" data-menu="">
+                    <img src="./assets/img/menu.png" alt="" class="menu__imagem">
+                    <p class="menu__texto">Menu</p>
                 </button>
+                <div class="menu__links esconde" data-link="menu">
+                    <a href="#" class="menu__link">home</a>
+                    <a href="#" class="menu__link">produtos</a>
+                    <a href="#" class="menu__link">cadastro</a>    
+                </div>
+            </nav>
+                <div class="cabecalho__logo">
+                    <img src="./assets/img/foguete.png" alt="" class="logo__imagem">
+                    <p class="logo__texto"><strong>G</strong>ap<strong>N</strong>et</p>
+                </div>
 
-                <ul class="carrinho__produtos esconde" data-carrinho="produto">
-                </ul>
-            </div>
-    </header>
+                <div class="cabecalho__carrinhos" data-carrinho="grupo">
+                    <button class="cabecalho__carrinho" data-carrinho="botao">
+                        <img src="./assets/img/trolley.png" alt="" class="carrinho__imagem">
+                        <p class="carrinho__texto" data-carrinho="texto">Carrinho</p>
+                    </button>
 
-    <main>
+                    <ul class="carrinho__produtos esconde" data-carrinho="produto">
+                    </ul>
+                </div>
+        </header>
 
-        <!--            CONTEÚDO           -->
+        <main>
 
-        <section class="conteudo">
-            <h1 class="conteudo__titulo"><strong class="conteudo__negrito">V</strong>elocidade</h1>
-            <p class="conteudo__paragrafo">&</p>
-            <h2 class="conteudo__titulo-2"><strong class="conteudo__negrito">Q</strong>ualidade</h2>
+            <!--            CONTEÚDO           -->
+
+            <section class="conteudo">
+                <h1 class="conteudo__titulo"><strong class="conteudo__negrito">V</strong>elocidade</h1>
+                <p class="conteudo__paragrafo">&</p>
+                <h2 class="conteudo__titulo-2"><strong class="conteudo__negrito">Q</strong>ualidade</h2>
+                
+                <div class="conteudo__grupo">
+                    <p class="conteudo__descricao">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit
+                        Praesentium aliquid asperiores, quaerat quis quod
+                    </p>
+                    <p class="conteudo__descricao">
+                        Assumenda ex esse harum nemo magnam, quas eum cumque
+                        explicabo. Tempora maxime laudantium veritatis commodi sint?
+                    </p>
+                </div>
+
+                <span class="conteudo__rolagem" data-rolagem>role para baixo</span>
+            </section>
             
-            <div class="conteudo__grupo">
-                <p class="conteudo__descricao">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                    Praesentium aliquid asperiores, quaerat quis quod
-                </p>
-                <p class="conteudo__descricao">
-                    Assumenda ex esse harum nemo magnam, quas eum cumque
-                    explicabo. Tempora maxime laudantium veritatis commodi sint?
-                </p>
-            </div>
+            <!--            produtos           -->
 
-            <span class="conteudo__rolagem" data-rolagem>role para baixo</span>
-        </section>
+            <section class="produtos">
+                <article class="cartao">
+                    <img src="./assets/img/produtos/wifi_1.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Plano Básico <br> 300 Mega</h3>
+                    <h4 class="cartao__preco">R$XXX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+                <article class="cartao">
+                    <img src="./assets/img/produtos/wifi_2.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Plano Médio <br> 500 Mega</h3>
+                    <h4 class="cartao__preco">R$XXX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+                <article class="cartao">
+                    <img src="./assets/img/produtos/wi-fi+rot.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Plano Ultra: <br> Roteador + 750 Mega</h3>
+                    <h4 class="cartao__preco">R$XXX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+                <article class="cartao">
+                    <img src="./assets/img/produtos/roteador_simples.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Roteador 5G</h3>
+                    <h4 class="cartao__preco">R$XXX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+                <article class="cartao">
+                    <img src="./assets/img/produtos/cabo.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Cabo de Internet</h3>
+                    <h4 class="cartao__preco">R$XX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+                <article class="cartao">
+                    <img src="./assets/img/produtos/chromecast.png" alt="" class="cartao__imagem" data-imagem="">
+                    <h3 class="cartao__titulo" data-produto="titulo">Chromecast</h3>
+                    <h4 class="cartao__preco">R$XXX,XX</h4>
+                    <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
+                    <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
+                </article>
+            </section>
+        </main>
         
-        <!--            produtos           -->
+        <script src="./assets/js/cabecalho.js"></script>
+        <script src="./assets/js/conteudo.js"></script>
+        <script src="./assets/js/produtos.js"></script>
+    </body>
 
-        <section class="produtos">
-            <article class="cartao">
-                <img src="./assets/img/produtos/wifi_1.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Plano Básico <br> 300 Mega</h3>
-                <h4 class="cartao__preco">R$XXX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-            <article class="cartao">
-                <img src="./assets/img/produtos/wifi_2.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Plano Médio <br> 500 Mega</h3>
-                <h4 class="cartao__preco">R$XXX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-            <article class="cartao">
-                <img src="./assets/img/produtos/wi-fi+rot.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Plano Ultra: <br> Roteador + 750 Mega</h3>
-                <h4 class="cartao__preco">R$XXX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-            <article class="cartao">
-                <img src="./assets/img/produtos/roteador_simples.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Roteador 5G</h3>
-                <h4 class="cartao__preco">R$XXX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-            <article class="cartao">
-                <img src="./assets/img/produtos/cabo.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Cabo de Internet</h3>
-                <h4 class="cartao__preco">R$XX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-            <article class="cartao">
-                <img src="./assets/img/produtos/chromecast.png" alt="" class="cartao__imagem" data-imagem="">
-                <h3 class="cartao__titulo" data-produto="titulo">Chromecast</h3>
-                <h4 class="cartao__preco">R$XXX,XX</h4>
-                <p class="cartao__descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum laborum natus</p>
-                <button class="cartao__botao" data-botao="carrinho">Adicionar ao Carrinho</button>
-            </article>
-        </section>
-    </main>
-    
-    <script src="./assets/js/cabecalho.js"></script>
-    <script src="./assets/js/conteudo.js"></script>
-    <script src="./assets/js/produtos.js"></script>
-</body>
+    <footer class="rodape">
+        <img src="./assets/img/foguete.png" alt="" class="rodape__imagem">
+        <p class="rodape__texto">&copy; GapNet</p>
+    </footer>
+
 </html>

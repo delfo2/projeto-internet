@@ -1,0 +1,15 @@
+.rodape {
+    display: flex;
+    justify-content: center;
+    margin: 6rem 0 1rem 0;
+}
+
+.rodape__imagem {
+    height: 50px;
+    width: 50px;
+}
+
+.rodape__texto {
+    font-family: var(--fonte-cursiva);
+    margin-left: 1%;
+}
