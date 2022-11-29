@@ -1,8 +1,70 @@
-const botoesAddCarrinho = document.querySelectorAll('[data-botao="carrinho"]');
+//ouvinte de rolagem de tela
+const text = document.querySelector('[data-rolagem]');
+
+window.addEventListener('scroll', () => {
+    let posicao = window.scrollY;
+    if(posicao > 150) {
+        text.classList.add('esconde');
+    } else {
+        text.classList.remove('esconde');
+    }
+})
+
+//
+//esconder menu de links
+const btnMenu = document.querySelector('[data-menu]');
+const btnlink = document.querySelector('[data-link]');
+
+btnMenu.addEventListener('click', () => {
+    if(btnlink.classList.length == 1) {
+        btnlink.classList.add('esconde');
+    } else {
+        btnlink.classList.remove('esconde');
+    }
+})
+
+//verificando quantos produtos tem no local storage
+let quantidadeItens = JSON.parse(localStorage.getItem('itens')).length || 'Escolha um produto';
+
+const textCarrinho = document.querySelector('[data-carrinho="texto"]');
+const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
+
+grupoCarrinho.addEventListener('mouseover', () => {
+    if(!isNaN(quantidadeItens)) {
+        let quantidadeAtual = JSON.parse(localStorage.getItem('itens')).length;
+        quantidadeItens = `${quantidadeAtual} produtos no carrinho`;
+        if(quantidadeAtual === 0) {
+            quantidadeItens = 'Escolha um produto';
+        }
+    }
+    textCarrinho.innerHTML = quantidadeItens;
+})
+grupoCarrinho.addEventListener('mouseout', () => {
+    textCarrinho.innerHTML = 'Carrinho';
+    if(localStorage.quantidade >= 10){
+        textCarrinho.textContent = 'Limite atingido.';
+    }
+})
+
+//esconder botão do carrinho
+const btnCarrinho = document.querySelector('[data-carrinho="botao"]');
 const listaCarrinho = document.querySelector('[data-carrinho="produto"]');
 
+btnCarrinho.addEventListener('click', () => {
+    if(listaCarrinho.classList.length == 1) {
+        listaCarrinho.classList.add('esconde');
+    } else {
+        listaCarrinho.classList.remove('esconde');
+    }
+})
+
+
+//                   LÓGICA DOS PRODUTOS                    //
+
+
+const botoesAddCarrinho = document.querySelectorAll('[data-botao="carrinho"]');
+
 const produtosMemoria = JSON.parse(localStorage.getItem('itens')) || [];
-let produtoClicado = JSON.parse(localStorage.getItem('quantidade'));
 
 const textoCarrinho = document.querySelector('[data-carrinho="texto"]');
 
@@ -78,12 +140,11 @@ function removeItem (botao, titulo) {
 }
 
 function atualizaContagem () {
-    produtoClicado = listaCarrinho.childElementCount;
-    localStorage.setItem('quantidade', JSON.stringify(produtoClicado));
-    if(produtoClicado === 0) {
+    quantidadeItens = listaCarrinho.childElementCount;
+    if(quantidadeItens === 0) {
         textoCarrinho.textContent = 'Escolha um produto';
     } else {
-        textoCarrinho.textContent = `${produtoClicado} produtos no carrinho`;
+        textoCarrinho.textContent = `${quantidadeItens} produtos no carrinho`;
     }
 }
 
