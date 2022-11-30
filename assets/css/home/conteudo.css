@@ -4,7 +4,7 @@
 }
 
 .conteudo__titulo::before {
-    content: url(../img/raio_medio_grande.png);
+    content: url(../../img/raio_medio_grande.png);
     display: inline-block;
     padding-right: 1rem;
 }
@@ -26,7 +26,7 @@
 }
 
 .conteudo__titulo-2::after {
-    content: url(../img/excelencia.png);
+    content: url(../../img/excelencia.png);
     display: inline-block;
     padding-left: 10%;
 }
