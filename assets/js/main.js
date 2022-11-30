@@ -3,11 +3,7 @@ const text = document.querySelector('[data-rolagem]');
 
 window.addEventListener('scroll', () => {
     let posicao = window.scrollY;
-    if(posicao > 150) {
-        text.classList.add('esconde');
-    } else {
-        text.classList.remove('esconde');
-    }
+    (posicao > 150) ? text.classList.add('esconde') : text.classList.remove('esconde');
 })
 
 //esconder menu de links
@@ -15,14 +11,11 @@ const btnMenu = document.querySelector('[data-menu]');
 const btnlink = document.querySelector('[data-link]');
 
 btnMenu.addEventListener('click', () => {
-    if(btnlink.classList.length == 1) {
-        btnlink.classList.add('esconde');
-    } else {
-        btnlink.classList.remove('esconde');
-    }
+    let botao = btnlink.classList;
+    (botao.length == 1) ? botao.add('esconde') : botao.remove('esconde');
 })
 
-//verificando quantos produtos tem no local storage
+//verificando quantos produtos tem no array
 const produtosMemoria = JSON.parse(localStorage.getItem('itens')) || [];
 let quantidadeItens = produtosMemoria.length || 'Escolha um produto';
 
@@ -31,21 +24,16 @@ const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
 
 function atualizaContagem () {
     quantidadeItens = listaCarrinho.childElementCount;
-    if(quantidadeItens === 0) {
-        textoCarrinho.textContent = 'Escolha um produto';
-    } else {
-        textoCarrinho.textContent = `${quantidadeItens} produtos no carrinho`;
-    }
+    (quantidadeItens === 0) ? textoCarrinho.textContent = 'Escolha um produto'
+        : textoCarrinho.textContent = `${quantidadeItens} produtos no carrinho`;
 }
 
 grupoCarrinho.addEventListener('mouseover', () => {
     atualizaContagem();
 })
 grupoCarrinho.addEventListener('mouseout', () => {
-    textoCarrinho.innerHTML = 'Carrinho';
-    if(listaCarrinho.childElementCount == 10){
-        textoCarrinho.textContent = 'Limite atingido.';
-    }
+    (listaCarrinho.childElementCount == 10) ? textoCarrinho.textContent = 'Limite atingido.'
+        : textoCarrinho.innerHTML = 'Carrinho';
 })
 
 //esconder botão do carrinho
@@ -53,11 +41,8 @@ const btnCarrinho = document.querySelector('[data-carrinho="botao"]');
 const listaCarrinho = document.querySelector('[data-carrinho="produto"]');
 
 btnCarrinho.addEventListener('click', () => {
-    if(listaCarrinho.classList.length == 1) {
-        listaCarrinho.classList.add('esconde');
-    } else {
-        listaCarrinho.classList.remove('esconde');
-    }
+    let lista = listaCarrinho.classList;
+    (lista.length === 1) ? lista.add('esconde') : lista.remove('esconde');
 })
 
 
@@ -74,16 +59,16 @@ botoesAddCarrinho.forEach(element => {
     element.addEventListener('click', function () {
         if(listaCarrinho.childElementCount < 10) {
             const grupo = this.parentNode;
-            const titulo = grupo.querySelector('[data-produto="titulo"]').innerHTML.replace('<br> ', '');
-            const img = grupo.querySelector('[data-imagem]');
             const itemAtual = {
-                'titulo': titulo,
-                'imagem': img.attributes.src.nodeValue
+                'titulo': grupo.querySelector('[data-produto="titulo"]').innerHTML.replace('<br> ', ''),
+                'imagem': grupo.querySelector('[data-imagem]').attributes.src.nodeValue
             }
             
             criarHtml(itemAtual);
             atualizaContagem();
             atualizaMemoria(itemAtual);
+
+            //animação de adicionar produto
             textoCarrinho.textContent = 'Produto adicionado';
             textoCarrinho.parentNode.classList.add('fundo__amarelo');
             setTimeout(() => {
