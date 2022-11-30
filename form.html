@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GapNet - Cadastro</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700;900&family=Josefin+Sans:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="./assets/img/foguete.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="./assets/css/normalize.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/home/cabecalho.css">
+        <link rel="stylesheet" href="./assets/css/home/conteudo.css">
+        <link rel="stylesheet" href="./assets/css/home/rodape.css">
+        <link rel="stylesheet" href="./assets/css/form/formulario.css">
+
+    </head>
+    <body class="corpo">
+        <header class="cabecalho">
+            <nav class="cabecalho__nav">
+                <button class="cabecalho__menu" data-menu="">
+                    <img src="./assets/img/menu.png" alt="" class="menu__imagem">
+                    <p class="menu__texto">Menu</p>
+                </button>
+                <div class="menu__links esconde" data-link="menu">
+                    <a href="./index.html" class="menu__link">home</a>
+                    <a href="#" class="menu__link">produtos</a>
+                    <a href="./form.html" class="menu__link">cadastro</a>    
+                </div>
+            </nav>
+                <div class="cabecalho__logo">
+                    <img src="./assets/img/foguete.png" alt="" class="logo__imagem">
+                    <p class="logo__texto"><strong>G</strong>ap<strong>N</strong>et</p>
+                </div>
+
+                <div class="cabecalho__carrinhos" data-carrinho="grupo">
+                    <button class="cabecalho__carrinho" data-carrinho="botao">
+                        <img src="./assets/img/trolley.png" alt="" class="carrinho__imagem">
+                        <p class="carrinho__texto" data-carrinho="texto">Carrinho</p>
+                    </button>
+
+                    <ul class="carrinho__produtos esconde" data-carrinho="produto">
+                    </ul>
+                </div>
+        </header>
+        <main>
+            <span class="conteudo__rolagem" data-rolagem>role para baixo</span>
+            <form class="formulario">
+                <fieldset class="formulario__campo">
+                    <h3>Informações pessoais</h3>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="ex: Tonny Garrido Simões" minlength="10" size="30vw" required>
+                    <label for="idade">Idade</label>
+                    <input type="number" pattern="\d" 
+                        required max="120" min="18" placeholder="ex: 18 anos"
+                        title="você deve ser maior que 18 anos ou menor que 120 anos">
+                    <label for="cpf">Cpf</label>
+                    <input type="number" name="Cpf" id="cpf" required placeholder="123.456.789-00">
+                    <label for="genero">Selecione o seu gênero</label>
+                    <select name="genero" id="genero">
+                        <option selected disabled value="">Selecione</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Outro</option>
+                    </select>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <h3>Contato</h3>
+                    <label for="numero">Número</label>
+                    <input type="tel" id="numero" required pattern="\d{10,11}"
+                        title="(12) 12345-1234" placeholder="(12) 12345-1234">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required title="exemplo@email" placeholder="exemplo@email">
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <h3>Endereço</h3>
+                    <label for="rua">Rua</label>
+                    <input type="text" required placeholder="ex: Avenida Carro da Rua" size="30vw">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" placeholder="ex: Passando no seu ovo" size="30vw">
+                    <label for="numCasa">Número da Casa</label>
+                    <input type="number" name="numCasa" id="numCasa" size="10vw" required placeholder="ex: 123">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="ex: Jardim folha">
+                    <label for="cep">Cep</label>
+                    <input type="cep" required placeholder="12345-678">
+                </fieldset>
+
+                <button type="submit">enviar</button>
+
+            </form>
+
+        </main>
+    
+        <script src="./assets/js/home/main.js"></script>
+    </body>
+    
+    <footer class="rodape">
+        <img src="./assets/img/foguete.png" alt="" class="rodape__imagem">
+        <p class="rodape__texto">&copy; GapNet</p>
+    </footer>
+</html>

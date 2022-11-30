@@ -20,7 +20,7 @@ const produtosMemoria = JSON.parse(localStorage.getItem('itens')) || [];
 let quantidadeItens = produtosMemoria.length || 'Escolha um produto';
 
 const textoCarrinho = document.querySelector('[data-carrinho="texto"]');
-const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]')
+const grupoCarrinho = document.querySelector('[data-carrinho="grupo"]');
 
 function atualizaContagem () {
     quantidadeItens = listaCarrinho.childElementCount;

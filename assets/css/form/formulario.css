@@ -1,0 +1,15 @@
+.formulario {
+    border: 10px var(--amarelo-hover) solid;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 10% 0 10%;
+}
+.formulario__campo {
+    background-color: var(--amarelo);
+    border: 5px var(--amarelo-hover) solid;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 5% 2%;
+}
