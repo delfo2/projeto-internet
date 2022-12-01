@@ -53,45 +53,67 @@
             <form class="formulario">
                 <fieldset class="formulario__campo">
                     <h3>Informações pessoais</h3>
-                    <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" placeholder="ex: Tonny Garrido Simões" minlength="10" size="30vw" required>
-                    <label for="idade">Idade</label>
-                    <input type="number" pattern="\d" 
+                    <div>
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" placeholder="ex: Tonny Garrido Simões" minlength="10" size="20vw" required>
+                    </div>   
+                    <div>
+                        <label for="idade">Idade</label>
+                        <input type="number" pattern="\d" id="idade"
                         required max="120" min="18" placeholder="ex: 18 anos"
                         title="você deve ser maior que 18 anos ou menor que 120 anos">
-                    <label for="cpf">Cpf</label>
-                    <input type="number" name="Cpf" id="cpf" required placeholder="123.456.789-00">
-                    <label for="genero">Selecione o seu gênero</label>
-                    <select name="genero" id="genero">
-                        <option selected disabled value="">Selecione</option>
-                        <option>Masculino</option>
-                        <option>Feminino</option>
-                        <option>Outro</option>
-                    </select>
+                    </div>
+                    <div>
+                        <label for="cpf">Cpf</label>
+                        <input type="number" name="Cpf" id="cpf" required placeholder="123.456.789-00">
+                    </div>
+                    <div>
+                        <label for="genero">Selecione o seu gênero</label>
+                        <select name="genero" id="genero">
+                            <option selected disabled value="">Selecione</option>
+                            <option>Masculino</option>
+                            <option>Feminino</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <h3>Contato</h3>
-                    <label for="numero">Número</label>
-                    <input type="tel" id="numero" required pattern="\d{10,11}"
+                    <div>
+                        <label for="numero">Número</label>
+                        <input type="tel" id="numero" required pattern="\d{10,11}"
                         title="(12) 12345-1234" placeholder="(12) 12345-1234">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" required title="exemplo@email" placeholder="exemplo@email">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required title="exemplo@email" placeholder="exemplo@email">
+                    </div>
                 </fieldset>
                 <fieldset class="formulario__campo">
                     <h3>Endereço</h3>
-                    <label for="rua">Rua</label>
-                    <input type="text" required placeholder="ex: Avenida Carro da Rua" size="30vw">
-                    <label for="complemento">Complemento</label>
-                    <input type="text" placeholder="ex: Passando no seu ovo" size="30vw">
-                    <label for="numCasa">Número da Casa</label>
-                    <input type="number" name="numCasa" id="numCasa" size="10vw" required placeholder="ex: 123">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" placeholder="ex: Jardim folha">
-                    <label for="cep">Cep</label>
-                    <input type="cep" required placeholder="12345-678">
+                    <div>
+                        <label for="rua">Rua</label>
+                        <input type="text" required placeholder="ex: Avenida Carro da Rua" size="20vw" id="rua">
+                    </div>
+                    <div>
+                        <label for="complemento">Complemento</label>
+                        <input type="text" placeholder="ex: Passando no seu ovo" size="20vw" id="complemento">
+                    </div>
+                    <div>
+                        <label for="numCasa">Número da Casa</label>
+                        <input type="number" name="numCasa" id="numCasa" size="10vw" required placeholder="ex: 123">
+                    </div>
+                    <div>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" placeholder="ex: Jardim folha">
+                    </div>
+                    <div>
+                        <label for="cep">Cep</label>
+                        <input type="number" required placeholder="12345-678" id="cep">
+                    </div>
                 </fieldset>
 
-                <button type="submit">enviar</button>
+                <button type="submit">Enviar</button>
 
             </form>
 

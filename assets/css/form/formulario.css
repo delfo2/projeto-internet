@@ -1,4 +1,5 @@
 .formulario {
+    background-color: var(--amarelo-hover);
     border: 10px var(--amarelo-hover) solid;
     border-radius: 20px;
     display: flex;
@@ -8,8 +9,70 @@
 .formulario__campo {
     background-color: var(--amarelo);
     border: 5px var(--amarelo-hover) solid;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    font-family: var(--fonte-cursiva);
     margin: 0;
     padding: 5% 2%;
+}
+
+.formulario__campo > h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.formulario__campo > label {
+    font-weight: 300;
+}
+
+.formulario__campo > div > input {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    display: block;
+    border: 2px var(--amarelo) solid;
+    border-radius: 10px;
+    margin: 5% 0;
+    padding: .5rem 3%;
+    transition: all 500ms;
+    width: 60%;
+}
+
+.formulario__campo > div > input:focus {
+    width: 90%;
+    outline: none;
+}
+
+.formulario__campo > div > input:valid {
+    border: 2px var(--verde) solid;
+}
+.formulario__campo > div > input:invalid {
+    border: 2px var(--vermelho) solid;
+}
+.formulario__campo > div > input:not(:focus) {
+    border: 2px var(--amarelo) solid;
+}
+
+.formulario__campo > div > select {
+    appearance: none;
+    background: white;
+    border: 2px var(--amarelo-hover) solid;
+    border-radius: 10px;
+    padding: 3% 10%;
+}
+
+.formulario > button {
+    border: 1px black solid;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-family: var(--fonte-cursiva);
+    padding: 2vh 0;
+    transition: 500ms;
+}
+.formulario > button:hover {
+    background-color: white;
+    color: black;
 }
