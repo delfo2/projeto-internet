@@ -98,6 +98,7 @@
     flex-direction: column;
     position:fixed;
     right: 2rem;
+    z-index: 3;
 }
 .carrinho__imagem {
     width: 40px;
